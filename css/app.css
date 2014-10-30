@@ -1,0 +1,263 @@
+/*Layout*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+	background-color: #F7F7F7;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -5em;
+  padding: 0 0 5em;
+}
+
+footer {
+	height: 5em;
+	background-color: #D9EAFF;
+	width: 100%;
+}
+
+/*Headings*/
+h1 {
+	color: #00479B;
+	font-weight: 300;
+	letter-spacing: .1em;
+	font-size: 1.6em;
+}
+
+h2, h3 {
+	color: #4E4E4E;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+/*Header*/
+.header-container {
+	width: 100%;
+	background-color: #D9EAFF;
+}
+
+.header {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #D9EAFF;
+	height: 5em;
+}
+
+.header-letter{
+	font-size: 1.5em;
+}
+
+/*Homepage lead*/
+.lead {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 4em;
+}
+
+.lead > h2 {
+	font-size: 2.2em;
+	font-weight: 300;
+}
+
+/*Buttons and graphics*/
+.op-button {
+	margin-top: 1.5em;
+	font-size: 1em;
+	width: 5.5em;
+	border-radius: .4em;
+	color: #00479B;
+	background-color: #D9EAFF;
+	border: solid 1px;
+	border-color: #00479B;
+	font-weight: 300;
+	letter-spacing: .05em;
+}
+
+.op-button:hover{
+	background-color: #00479B;
+	color:white;
+	font-weight: lighter;
+}
+
+.op-button-dark {
+	border: 1px outset #001963;
+	background-color: #00479B;
+	color: white;
+	font-weight: lighter;
+	font-size: 1.2em;
+}
+
+.login {
+	font-size: .9em;
+}
+
+.glyphicon-eye-open, .glyphicon-tower, .glyphicon-flash{
+	font-size: 6em;
+	color: #00479B;
+}
+
+.profile-button {
+	width: auto;
+}
+
+#add-rx {
+	font-size: 1.2em;
+}
+
+.form-button {
+	margin-right: .3em;
+}
+
+/*Forms*/
+#login-form {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 1.3em;
+	margin-top: 5em;
+}
+
+#email, #password {
+	margin-left: auto;
+	margin-right: auto;
+	color: #4E4E4E;
+}
+
+#email:required, #password:required {
+	border-color: #00479B;
+	color: #4E4E4E;
+}
+
+input[type="number"] {
+	margin-right: 1em;
+	font-size: 1.2em;
+	width: 7em;
+}
+
+input[type="number"]:required {
+	border-color: #00479B;
+	color: #4E4E4E;
+}
+
+#prescription-form {
+	margin-top: 3em;
+}
+
+label {
+	font-size: 1.2em;
+	padding-right: .2em;
+}
+
+/*Profile*/
+.profile {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.lead-profile {
+	text-align: left;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 4em;
+	font-size: 1em;
+}
+
+#button-div {
+	display: block;
+	margin-bottom: 2em;
+}
+
+.rx-component {
+	margin-bottom: 3em;
+}
+.dropdown-menu {
+	font-size: 1.3em;
+	color: #00479B;
+}
+
+/*Benefits div*/
+.col-md-4 {
+	padding-bottom: 2em;
+}
+
+.benefits {
+	text-align: center;
+}
+
+/*Desktop UI changes*/
+@media only screen and (min-width : 1000px) {
+	
+	h1 {
+		font-size: 2em;
+	}
+
+	.op-button-dark, #sign-in, #logout {
+		margin-top: 1.6em;
+		font-size: 1.2em;
+	}
+
+	.login {
+		font-size: 1em;
+	}
+
+	.header, footer {
+		height: 7em;
+	}
+
+	.glyphicon-eye-open, .glyphicon-tower, .glyphicon-flash {
+		font-size: 8em;
+	}
+
+	.lead > h2 {
+		font-size: 2.5em;
+		font-weight: 300;
+	}
+
+	.lead {
+		margin-top: 5em;
+	}
+
+	.titles {
+		font-size: 2.5em;
+	}
+
+	.subtitles {
+		font-size: 1.6em;
+	}
+
+	#login-form{
+		font-size: 1.5em;
+		margin-top: 5em;
+	}
+
+	#cancel {
+		font-size: 1em;
+	}
+
+	.col-md-4 {
+		padding-bottom: 5em;
+	}
+
+	#add-rx {
+		font-size: 1.4em;
+	}
+
+	.lead-profile {
+		font-size: 1.2em;
+	}
+}

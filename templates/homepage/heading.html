@@ -1,0 +1,33 @@
+<div class="row row-centered">
+
+    <div class="col-md-12 col-centered">
+
+        <div class="header-container">
+
+            <div class="header">
+
+                <h1 class="pull-left">
+
+                    <span class="header-letter">O</span>PTERNATIVE
+
+                </h1>
+
+                <button ng-hide="rxPortal.logged_in || rxPortal.loginPartial" ng-click="rxPortal.openLoginPartial()" class="pull-right pure-button pure-button-primary op-button" id="sign-in">Sign in</button>
+
+                <button ng-show="rxPortal.logged_in" ng-click="rxPortal.logout()" class="pull-right pure-button pure-button-primary op-button" id="logout">Log out</button>
+
+            </div>
+
+        </div>
+
+        <div class="lead" ng-hide="rxPortal.logged_in || rxPortal.loginPartial">
+
+            <h2 class="titles">Manage your prescriptions from the comfort of your home</h2>
+
+            <button ng-click="rxPortal.openLoginPartial()" class="pure-button pure-button-primary op-button op-button-dark" id="sign-up">Sign up</button>
+
+        </div>
+
+    </div>
+
+</div>

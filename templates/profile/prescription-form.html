@@ -1,0 +1,100 @@
+<form ng-show="profile.prescriptionPartial" id="prescription-form" class='pure-form' name="prescriptionForm">
+
+    <h2>Enter your prescription below and click 'Submit' when finished</h2>
+
+    <fieldset>
+
+        <div class="rx-component">
+
+            <h3>Type:</h3>
+
+            <label for="glasses" class="pure-radio">
+
+                <input type="radio" id="glasses" ng-model="prescription.type" value="Glasses"> Glasses
+
+            </label>
+
+            <label for="contacts" class="pure-radio">
+
+                <input type="radio" id="contacts" ng-model="prescription.type" value="Contacts"> Contacts
+
+            </label>
+
+        </div>
+
+        <div class="rx-component">
+            
+            <h3>SPH: Between -10.0 and +10.0 in increments of 0.25.</h3>
+
+            <label>Left Eye</label>
+            <input type="number" ng-model="prescription.left.sph" name="sph" min="-10" max="10" step="0.25" required>
+
+            <label>Right Eye</label>
+            <input type="number" ng-model="prescription.right.sph" name="sph" min="-10" max="10" step="0.25" required>
+        
+        </div>
+
+        <div class="rx-component">
+           
+            <h3>CYL: Between -10.0 and +10.0 in increments of 0.25.</h3>
+
+            <label>Left Eye</label>
+            <input type="number" ng-model="prescription.left.cyl" name="cyl" min="-10" max="10" step="0.25" required>
+
+            <label>Right Eye</label>
+            <input type="number" ng-model="prescription.right.cyl" name="cyl" min="-10" max="10" step="0.25" required>
+        
+        </div>
+
+        <div class="rx-component">
+            
+            <h3>AXIS: Between 0 and 180 in increments of 1.</h3>
+
+            <label>Left Eye</label>
+            <input type="number" ng-model="prescription.left.axis" name="axis" min="0" max="180" step="1" required>
+
+            <label>Right Eye</label>
+            <input type="number" ng-model="prescription.right.axis" name="axis" min="0" max="180" step="1" required>
+        
+        </div>
+
+        <div ng-show="prescription.type == 'Contacts'">
+           
+            <div class="rx-component">
+                
+                <h3>BC: Between 7.0 and 9.0 in increments of 0.1.</h3>
+
+                <label>Left Eye</label>
+                <input type="number" ng-model="prescription.left.bc" name="bc" min="7" max="9" step="0.1" ng-required="prescription.type == 'Contacts'">
+
+                <label>Right Eye</label>
+                <input type="number" ng-model="prescription.right.bc" name="bc" min="7" max="9" step="0.1" ng-required="prescription.type == 'Contacts'">
+            
+            </div>
+            
+            <div class="rx-component">
+                
+                <h3>DIAM: Between 13.0 and 15.0 in increments of 0.1.</h3>
+
+                <label>Left Eye</label>
+                <input type="number" ng-model="prescription.left.diam" name="diam" min="13" max="15" step="0.1" ng-required="prescription.type == 'Contacts'">
+
+                <label>Right Eye</label>
+                <input type="number" ng-model="prescription.right.diam" name="diam" min="13" max="15" step="0.1" ng-required=
+                "prescription.type == 'Contacts'">
+           
+            </div>
+
+        </div>
+
+        <div id="button-div">
+            
+            <button ng-click="prescriptionForm.$valid && profile.addPrescription()" type="submit" class="pure-button pure-button-primary op-button op-button-dark form-button">Submit</button>
+           
+            <button ng-click="profile.cancelPrescriptionPartial()" type="submit" class="pure-button pure-button-primary op-button op-button-dark form-button">Cancel</button>
+        
+        </div>
+   
+    </fieldset>
+
+</form>

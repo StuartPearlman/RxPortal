@@ -1,0 +1,26 @@
+<div ng-show="rxPortal.loginPartial" class="row row-centered">
+
+    <div class="col-md-12 col-centered">
+
+        <form id="login-form" class='pure-form pure-form-stacked' name="loginForm">
+
+            <fieldset>
+
+                <input ng-model="email" id="email" type="email" name="email" placeholder="Email Address" autofocus required>
+
+                <input ng-model="password" id="password" type="password" name="password" placeholder="Password" required>
+
+                <button ng-click="loginForm.$valid && rxPortal.login()" type="submit" id="signup" class="pure-button pure-button-primary op-button op-button-dark login">Sign Up</button>
+
+                <button ng-click="loginForm.$valid && rxPortal.login()" type="submit" class="pure-button pure-button-primary op-button op-button-dark login">Sign In</button>
+                
+
+            </fieldset>
+
+                <button ng-click="rxPortal.cancelLoginPartial()" type="submit" class="pure-button pure-button-primary op-button login" id="cancel">Cancel</button>
+        </form>
+                
+
+    </div>
+
+</div>

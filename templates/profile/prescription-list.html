@@ -1,0 +1,73 @@
+<div ng-hide="profile.prescriptionPartial" class="lead lead-profile">
+
+    <h2 ng-show="profile.allPrescriptions.length">My Prescriptions</h2>
+
+    <h2 ng-hide="profile.allPrescriptions.length">Click the button below to add a prescription</h2>
+
+    <div ng-repeat="prescription in profile.allPrescriptions | date">
+
+        <div class="dropdown">
+
+            <h1 href="#" data-toggle="dropdown" class="dropdown-toggle">{{prescription.type}} ({{prescription.createdOn | date:'yyyy-MM-dd'}})</h1>
+
+            <ul class="dropdown-menu">
+
+                <li>
+                    <a><u>Left eye</u></a>
+                </li>
+
+                <li>
+                    <a>SPH: {{prescription.left.sph}}</a>
+                </li>
+
+                <li>
+                    <a>CYL: {{prescription.left.cyl}}</a>
+                </li>
+
+                <li>
+                    <a>AXIS: {{prescription.left.axis}}</a>
+                </li>
+
+                <li ng-show="prescription.left.bc">
+                    <a>BC: {{prescription.left.bc}}</a>
+                </li>
+
+                <li ng-show="prescription.left.diam">
+                    <a>DIAM: {{prescription.left.diam}}</a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    <a><u>Right eye</u></a>
+                </li>
+
+                <li>
+                    <a>SPH: {{prescription.right.sph}}</a>
+                </li>
+
+                <li>
+                    <a>CYL: {{prescription.right.cyl}}</a>
+                </li>
+
+                <li>
+                    <a>AXIS: {{prescription.right.axis}}</a>
+                </li>
+
+                <li ng-show="prescription.right.bc">
+                    <a>BC: {{prescription.right.bc}}</a>
+                </li>
+
+                <li ng-show="prescription.right.diam">
+                    <a>DIAM: {{prescription.right.diam}}</a>
+                </li>
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button id="add-rx" ng-hide="profile.prescriptionPartial" ng-click="profile.openPrescriptionPartial()" type="submit" class="pure-button pure-button-primary op-button op-button-dark profile-button">Add new prescription</button>
